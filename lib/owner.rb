@@ -43,8 +43,8 @@ class Owner
 
   def buy_cat(add_cat)
     new_cat = Cat.new(add_cat)
-    @cat.push(new_cat)
-    @cat
+    @@all.push(new_cat)
+    @@al
   end
 
 
