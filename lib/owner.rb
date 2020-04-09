@@ -2,7 +2,7 @@ require 'pry'
 
 class Owner
   attr_reader :species, :name
-  attr_accessor :dog, :cat
+  
   
   @@all = Array.new
   
@@ -31,12 +31,12 @@ class Owner
   end
   
   def cat
-    @cat
+    Cat.all.select {|cat| cat.owner == self}
     
   end
   
   def dog
-    @dog
+    Dog.all.select {|dog| dog.owner == self}
   end
   
   def buy_cat(add_cat) 
