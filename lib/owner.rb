@@ -51,8 +51,8 @@ class Owner
 
    def buy_dog(add_dog)
     new_dog = Dog.new(add_dog)
-    @dog.push(new_dog)
-    @dog
+    @@all.push(new_dog)
+    @@all
   end
 
   def walk_dogs
