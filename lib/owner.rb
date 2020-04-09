@@ -29,13 +29,13 @@ class Owner
     @@all = Array.new
   end
 
-  def cat
+  def cats
     Cat.all.select do |cat|
       cat.owner == self
     end
   end
 
-  def dog
+  def dogs
     Dog.all.select do |dog|
       dog.owner == self
     end
