@@ -30,11 +30,13 @@ class Owner
   end
 
   def cat
-    Cat.all.map {|cat| cat.owner == self}
+    Cat.all.select do |cat| 
+      cat.owner == self
+    end
   end
 
   def dog
-    Dog.all.map {|dog| dog.owner == self}
+    Dog.all.select {|dog| dog.owner == self}
   end
 
   def buy_cat(add_cat)
