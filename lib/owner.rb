@@ -42,7 +42,7 @@ class Owner
   end
 
   def buy_cat(add_cat)
-    new_cat = Cat.new(add_cat)
+    new_cat = Cat.new(add_cat,self)
     @@all.push(new_cat)
     @@all
   end
@@ -50,7 +50,7 @@ class Owner
 
 
    def buy_dog(add_dog)
-    new_dog = Dog.new(add_dog)
+    new_dog = Dog.new(add_dog,self)
     @@all.push(new_dog)
     @@all
   end
